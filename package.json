@@ -1,0 +1,32 @@
+{
+  "name": "demo-appleui",
+  "version": "1.0.0",
+  "description": "Demo website Apple UI desarrollado con Tailwindcss / Pug / y algo de Js Realizado en el curso de Udemy: Learn Tailwind CSS Build Your Own Portfolio + Cool Projects https://www.udemy.com/course/learn-tailwind-css-tesla-apple-cool-portfolio-tailwind-ui/",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css",
+    "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./public/css/main.css",
+    "pugin": "pug -w --pretty ./pugfiles -o ./public",
+    "dev":"nodemon -x npm run build:css -w src/tailwind.css -w tailwind.config.js -w ./public/**/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/russelqp/Demo-AppleUI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/russelqp/Demo-AppleUI/issues"
+  },
+  "homepage": "https://github.com/russelqp/Demo-AppleUI#readme",
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.10",
+    "postcss-cli": "^8.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
